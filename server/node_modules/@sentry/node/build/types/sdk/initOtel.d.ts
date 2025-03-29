@@ -1,0 +1,24 @@
+import { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
+import type { EsmLoaderHookOptions } from '../types';
+import type { NodeClient } from './client';
+/**
+ * Initialize OpenTelemetry for Node.
+ */
+export declare function initOpenTelemetry(client: NodeClient): void;
+/** Initialize the ESM loader. */
+export declare function maybeInitializeEsmLoader(esmHookConfig?: EsmLoaderHookOptions): void;
+interface NodePreloadOptions {
+    debug?: boolean;
+    integrations?: string[];
+    registerEsmLoaderHooks?: EsmLoaderHookOptions;
+}
+/**
+ * Preload OpenTelemetry for Node.
+ * This can be used to preload instrumentation early, but set up Sentry later.
+ * By preloading the OTEL instrumentation wrapping still happens early enough that everything works.
+ */
+export declare function preloadOpenTelemetry(options?: NodePreloadOptions): void;
+/** Just exported for tests. */
+export declare function setupOtel(client: NodeClient): BasicTracerProvider;
+export {};
+//# sourceMappingURL=initOtel.d.ts.map
