@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 import { useContext, useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { assets } from '../assets/assets'

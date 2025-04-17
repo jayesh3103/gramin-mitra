@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GraminMitra</title>
 
     <style>
         /* Change chatbot icon */
         df-messenger {
-            --df-messenger-button-icon: url('/client/public/chatbot.png') !important;
-            --df-messenger-button-width: 56px;
-            --df-messenger-button-height: 56px;
-        }
+        --df-messenger-button-icon: url('/new-logo.jpg') !important;
+        --df-messenger-button-width: 56px;
+        --df-messenger-button-height: 56px;
+}
     </style>
 </head>
 <body>
     <div id="root"></div>
 
     <!-- Dialogflow Chatbot -->
+     
     <df-messenger
-      intent="WELCOME"
-      chat-title="Gramin_Mitra"
-      agent-id="6fb7e54e-efa1-4c1a-8b4d-26398c6bb708"
-      language-code="en">
+    intent="WELCOME"
+    chat-title="Gramin_Mitra"
+    agent-id="6fb7e54e-efa1-4c1a-8b4d-26398c6bb708"
+    language-code="en">
     </df-messenger>
 
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
