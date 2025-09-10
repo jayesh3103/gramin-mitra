@@ -65,6 +65,8 @@ Traditional job portals don’t cater to these unique needs, leaving a large seg
 2. Navigate to the project directory:
    ```bash
    cd client
+   ```
+   ```bash
    cd server
    ```
 3. Install dependencies:
