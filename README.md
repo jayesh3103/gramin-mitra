@@ -61,7 +61,7 @@ Traditional job portals don’t cater to these unique needs, leaving a large seg
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/jayesh3103/RuralConnect.git
+   git clone https://github.com/jayesh3103/gramin-mitra.git
 2. Navigate to the project directory:
    ```bash
    cd backend
