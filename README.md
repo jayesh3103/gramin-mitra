@@ -64,8 +64,8 @@ Traditional job portals don’t cater to these unique needs, leaving a large seg
    git clone https://github.com/jayesh3103/gramin-mitra.git
 2. Navigate to the project directory:
    ```bash
-   cd backend
-   cd frontend
+   cd client
+   cd server
    ```
 3. Install dependencies:
    ```bash
