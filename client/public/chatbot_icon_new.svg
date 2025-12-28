@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Circle Background -->
+  <circle cx="256" cy="256" r="240" fill="url(#grad1)" filter="url(#shadow)" />
+  
+  <!-- Robot Head -->
+  <rect x="128" y="140" width="256" height="220" rx="40" ry="40" fill="#ffffff" />
+  
+  <!-- Eyes -->
+  <circle cx="200" cy="230" r="25" fill="#0f766e" />
+  <circle cx="312" cy="230" r="25" fill="#0f766e" />
+  
+  <!-- Mouth (Smile) -->
+  <path d="M 200 290 Q 256 330 312 290" stroke="#0f766e" stroke-width="12" fill="none" stroke-linecap="round" />
+  
+  <!-- Antenna -->
+  <line x1="256" y1="140" x2="256" y2="90" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+  <circle cx="256" cy="80" r="15" fill="#fbbf24" />
+  
+  <!-- Cheeks -->
+  <circle cx="160" cy="260" r="10" fill="#fca5a5" opacity="0.6" />
+  <circle cx="352" cy="260" r="10" fill="#fca5a5" opacity="0.6" />
+  
+</svg>

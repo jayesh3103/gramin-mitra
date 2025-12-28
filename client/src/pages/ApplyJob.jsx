@@ -10,7 +10,7 @@ import JobCard from '../components/JobCard'
 import Footer from '../components/Footer'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { useAuth } from '@clerk/clerk-react'
+import { useAuth, useUser } from '@clerk/clerk-react'
 
 const ApplyJob = () => {
 
@@ -23,38 +23,77 @@ const ApplyJob = () => {
   const [JobData, setJobData] = useState(null)
   const [isAlreadyApplied, setIsAlreadyApplied] = useState(false)
 
-  const { jobs, backendUrl, userData, userApplications, fetchUserApplications } = useContext(AppContext)
+  const { jobs, backendUrl, userData, userApplications, fetchUserApplications, setUserApplications } = useContext(AppContext)
 
   const fetchJob = async () => {
-
     try {
+      // First try to find the job in the locally available jobs (context)
+      // This handles mock data and pre-fetched data
+      const jobFromContext = jobs.find(job => job._id === id)
 
+      if (jobFromContext) {
+        setJobData(jobFromContext)
+        return // Found it, no need to fetch
+      }
+
+      // Fallback: Fetch from backend if not in context
       const { data } = await axios.get(backendUrl + `/api/jobs/${id}`)
 
       if (data.success) {
         setJobData(data.job)
       } else {
-        toast.error(data.message)
+        // toast.error(data.message) 
+        console.log("Job not found in backend or context")
       }
 
     } catch (error) {
-      toast.error(error.message)
+      // toast.error(error.message)
+      console.log("Error fetching job details:", error.message)
     }
-
   }
+
+  const { user } = useUser()
 
   const applyHandler = async () => {
     try {
 
+      if (!user) {
+        return toast.error('Login to apply for jobs')
+      }
+
+      // Mock Apply for Sample Jobs (ids are simple strings '1', '2', etc.)
+      if (JobData._id && JobData._id.length < 24) {
+        toast.success("Applied Successfully (Demo)")
+        setIsAlreadyApplied(true)
+        
+        // Add specific mock application to context so it appears in "Applied Jobs"
+        const mockApplication = {
+          companyId: {
+            image: JobData.companyId.image,
+            name: JobData.companyId.name
+          },
+          jobId: {
+            title: JobData.title,
+            location: JobData.location,
+            _id: JobData._id
+          },
+          date: Date.now(),
+          status: 'Pending'
+        }
+        
+        // Update global state
+        setUserApplications(prev => [...prev, mockApplication])
+        
+        return 
+      }
+
+      // For Real Jobs, we require the backend userData
       if (!userData) {
         return toast.error('Login to apply for jobs')
       }
 
-      if (!userData.resume) {
-        navigate('/applications')
-        return toast.error('Upload resume to apply')
-      }
-
+      // Resume check removed for rural audience
+      
       const token = await getToken()
 
       const { data } = await axios.post(backendUrl + '/api/users/apply',

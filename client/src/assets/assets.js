@@ -186,8 +186,8 @@ export const jobsData = [
             <li>Good communication and observation skills.</li>
         </ol>`,
         salary: 15000,
-        date: 1729681667114,
-        category: "Security",
+        date: Date.now(),
+        category: "Security Guard",
     },
     {
         _id: '2',
@@ -215,8 +215,8 @@ export const jobsData = [
             <li>Good time management skills.</li>
         </ol>`,
         salary: 12000,
-        date: 1729681667114,
-        category: "Hospitality",
+        date: Date.now(),
+        category: "Cook",
     },
     {
         _id: '3',
@@ -244,37 +244,465 @@ export const jobsData = [
             <li>Ability to use electrical tools efficiently.</li>
         </ol>`,
         salary: 18000,
-        date: 1729681667114,
-        category: "Technical Trades",
+        date: Date.now(),
+        category: "Electrician",
     },
     {
         _id: '4',
-        title: "Tailor",
-        location: "Nasrullaganj",
-        level: "Skilled Labor",
+        title: "Store Helper",
+        location: "Kothri-Kalan",
+        level: "Entry Level",
         companyId: {
             "_id": "670e4d25ca9fda8f1bf359b9",
-            "name": "Local Boutique",
-            "email": "boutique@demo.com",
+            "name": "General Store",
+            "email": "store@demo.com",
             "image": company_icon,
         },
         description: `
-        <p>We are seeking a skilled Tailor for our boutique to design and stitch custom clothing.</p>
+        <p>Seeking a Store Helper to assist in daily shop operations.</p>
         <h2><strong>Key Responsibilities</strong></h2>
         <ol>
-            <li>Design and stitch garments based on customer requirements.</li>
-            <li>Take accurate measurements and make necessary alterations.</li>
-            <li>Ensure timely completion of orders.</li>
+            <li>Clean and organize the store.</li>
+            <li>Assist customers in finding products.</li>
+            <li>Stock shelves and manage inventory.</li>
         </ol>
         <h2><strong>Skills Required</strong></h2>
         <ol>
-            <li>Proficiency in stitching and garment design.</li>
-            <li>Attention to detail in measurements and fittings.</li>
-            <li>Ability to use sewing machines and hand-stitching techniques.</li>
+            <li>Basic math skills.</li>
+            <li>Hardworking and punctual.</li>
+        </ol>`,
+        salary: 10000,
+        date: Date.now(),
+        category: "Store Helper",
+    },
+    {
+        _id: '5',
+        title: "Maid",
+        location: "Amlaha",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Private Residence",
+            "email": "home@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Reliable maid needed for household work.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Sweeping and mopping floors.</li>
+            <li>Washing utensils and clothes.</li>
+            <li>General house cleaning.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Trustworthy and efficient.</li>
+            <li>Previous experience preferred.</li>
+        </ol>`,
+        salary: 8000,
+        date: Date.now(),
+        category: "Maid",
+    },
+    {
+        _id: '6',
+        title: "Driver",
+        location: "JataKheda",
+        level: "Skilled",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Logistics Co.",
+            "email": "logistics@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Experienced Driver required for commercial vehicle.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Drive goods vehicle safely.</li>
+            <li>Ensure timely delivery.</li>
+            <li>Maintain vehicle condition.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Valid Commercial Driving License.</li>
+            <li>Clean driving record.</li>
+        </ol>`,
+        salary: 16000,
+        date: Date.now(),
+        category: "Driver",
+    },
+    {
+        _id: '7',
+        title: "Plumber",
+        location: "Shujalpur",
+        level: "Skilled Labor",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "City Plumbing",
+            "email": "plumbing@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Expert Plumber needed for installations and repairs.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Install and repair pipes and fixtures.</li>
+            <li>Fix leaks and blockages.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Plumbing certification or experience.</li>
+            <li>Problem-solving skills.</li>
+        </ol>`,
+        salary: 17000,
+        date: Date.now(),
+        category: "Plumber",
+    },
+    {
+        _id: '8',
+        title: "Mechanic",
+        location: "Sehore",
+        level: "Skilled Labor",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Auto Garage",
+            "email": "garage@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Mechanic needed for two-wheeler and four-wheeler repairs.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Engine tuning and servicing.</li>
+            <li>Tire changing and brake repairs.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Mechanical knowledge of vehicles.</li>
+            <li>Experience with tools.</li>
+        </ol>`,
+        salary: 14500,
+        date: Date.now(),
+        category: "Mechanic",
+    },
+    {
+        _id: '9',
+        title: "Security Guard",
+        location: "Aashta",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Secure Life Agency",
+            "email": "securelife@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Guard required for night shift at a warehouse.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Patrol the perimeter every hour.</li>
+            <li>Monitor CCTV cameras.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Physical fitness.</li>
+            <li>Alertness.</li>
+        </ol>`,
+        salary: 13500,
+        date: Date.now(),
+        category: "Security Guard",
+    },
+    {
+        _id: '10',
+        title: "Cook",
+        location: "Shujalpur",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Taste of India",
+            "email": "taste@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Need a cook for a small family restaurant.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Cook breakfast and lunch items.</li>
+            <li>Keep the cooking area clean.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Experience with South Indian dishes.</li>
+            <li>Speed and hygiene.</li>
+        </ol>`,
+        salary: 12500,
+        date: 1729681667115,
+        category: "Cook",
+    },
+    {
+        _id: '11',
+        title: "Store Helper",
+        location: "JataKheda",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Village Mart",
+            "email": "mart@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Helper needed for loading and unloading goods.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Unload delivery trucks.</li>
+            <li>Arrange items on shelves.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Physical strength.</li>
+            <li>Basic reading skills.</li>
+        </ol>`,
+        salary: 9500,
+        date: 1729681667115,
+        category: "Store Helper",
+    },
+    {
+        _id: '12',
+        title: "Maid",
+        location: "Ichhawar",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Gupta Household",
+            "email": "gupta@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Full-time maid for cleaning and cooking assistance.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Daily cleaning of the house.</li>
+            <li>Assisting in kitchen work.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Honesty and punctuality.</li>
+        </ol>`,
+        salary: 9000,
+        date: 1729681667115,
+        category: "Maid",
+    },
+    {
+        _id: '13',
+        title: "Driver",
+        location: "Sehore",
+        level: "Skilled",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Sharma Travels",
+            "email": "sharma@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Taxi driver needed for local trips.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Pick up and drop customers.</li>
+            <li>Maintain car cleanliness.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Valid License.</li>
+            <li>Knowledge of local routes.</li>
+        </ol>`,
+        salary: 15500,
+        date: 1729681667115,
+        category: "Driver",
+    },
+    {
+        _id: '14',
+        title: "Plumber",
+        location: "Kothri-Kalan",
+        level: "Skilled Labor",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Quick Fix Plumbing",
+            "email": "quickfix@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Plumber for residential repairs.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Repair leaking taps and pipes.</li>
+            <li>Install bathroom fittings.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Experience in plumbing.</li>
+        </ol>`,
+        salary: 16500,
+        date: 1729681667115,
+        category: "Plumber",
+    },
+    {
+        _id: '15',
+        title: "Electrician",
+        location: "Amlaha",
+        level: "Skilled Labor",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Power Solutions",
+            "email": "power@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Electrician for wiring new houses.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Plan and install wiring systems.</li>
+            <li>Connect switches and sockets.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Safety certified.</li>
+            <li>Experience with house wiring.</li>
+        </ol>`,
+        salary: 18500,
+        date: 1729681667115,
+        category: "Electrician",
+    },
+    {
+        _id: '16',
+        title: "Mechanic",
+        location: "Kothri-Kalan",
+        level: "Skilled Labor",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Bike Point",
+            "email": "bikepoint@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Two-wheeler mechanic needed urgently.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Service bikes and scooters.</li>
+            <li>Repair engines and brakes.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Experience with Honda and Hero bikes.</li>
+        </ol>`,
+        salary: 13000,
+        date: 1729681667115,
+        category: "Mechanic",
+    },
+    {
+        _id: '17',
+        title: "Security Guard",
+        location: "Sehore",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "City Mall",
+            "email": "citymall@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Mall security guard needed.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Check bags at entrance.</li>
+            <li>Guide visitors.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Polite behavior.</li>
+            <li>Vigilance.</li>
         </ol>`,
         salary: 14000,
-        date: 1729681667114,
-        category: "Fashion",
+        date: Date.now(),
+        category: "Security Guard",
+    },
+    {
+        _id: '18',
+        title: "Cook",
+        location: "Aashta",
+        level: "Intermediate Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Highway Motley",
+            "email": "motel@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Cook for a highway restaurant.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Prepare snacks and tea.</li>
+            <li>Clean the kitchen.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Fast cooking.</li>
+        </ol>`,
+        salary: 11000,
+        date: Date.now(),
+        category: "Cook",
+    },
+    {
+        _id: '19',
+        title: "Store Helper",
+        location: "Ichhawar",
+        level: "Entry Level",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "Medical Store",
+            "email": "medical@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Helper for a pharmacy.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Clean the shop.</li>
+            <li>Fetch medicines for the pharmacist.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Basic reading (English/Hindi).</li>
+        </ol>`,
+        salary: 9000,
+        date: Date.now(),
+        category: "Store Helper",
+    },
+     {
+        _id: '20',
+        title: "Driver",
+        location: "Aashta",
+        level: "Skilled",
+        companyId: {
+            "_id": "670e4d25ca9fda8f1bf359b9",
+            "name": "School Bus Services",
+            "email": "schoolbus@demo.com",
+            "image": company_icon,
+        },
+        description: `
+        <p>Driver for school bus.</p>
+        <h2><strong>Key Responsibilities</strong></h2>
+        <ol>
+            <li>Pick up and drop children safely.</li>
+            <li>Follow traffic rules strictly.</li>
+        </ol>
+        <h2><strong>Skills Required</strong></h2>
+        <ol>
+            <li>Heavy Vehicle License.</li>
+            <li>Patience and care.</li>
+        </ol>`,
+        salary: 14000,
+        date: Date.now(),
+        category: "Driver",
     }
 ];
 

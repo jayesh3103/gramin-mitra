@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import JobListing from '../components/JobListing'
-import AppDownload from '../components/AppDownload'
+import JobAlert from '../components/JobAlert'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <JobListing />
+      <JobAlert />
       <Footer />
     </div>
   )

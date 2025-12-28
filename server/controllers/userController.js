@@ -1,6 +1,7 @@
 import Job from "../models/Job.js"
 import JobApplication from "../models/JobApplication.js"
 import User from "../models/User.js"
+import Subscriber from "../models/Subscriber.js"
 import { v2 as cloudinary } from "cloudinary"
 
 // Get User Data
@@ -108,5 +109,30 @@ export const updateUserResume = async (req, res) => {
 
         res.json({ success: false, message: error.message })
 
+    }
+}
+
+// Subscribe to Job Alerts
+export const subscribeToJobAlerts = async (req, res) => {
+    try {
+
+        const { email, phone } = req.body
+
+        if (!email || !phone) {
+            return res.json({ success: false, message: 'Email and Phone are required' })
+        }
+
+        const isAlreadySubscribed = await Subscriber.findOne({ email })
+
+        if (isAlreadySubscribed) {
+            return res.json({ success: false, message: 'Email already subscribed' })
+        }
+
+        await Subscriber.create({ email, phone })
+
+        res.json({ success: true, message: 'Subscribed Successfully' })
+
+    } catch (error) {
+        res.json({ success: false, message: error.message })
     }
 }

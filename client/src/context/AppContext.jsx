@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useAuth, useUser } from "@clerk/clerk-react";
+import { jobsData } from "../assets/assets";
 
 export const AppContext = createContext()
 
@@ -19,7 +20,8 @@ export const AppContextProvider = (props) => {
 
     const [isSearched, setIsSearched] = useState(false)
 
-    const [jobs, setJobs] = useState([])
+    // Initialize with mock data
+    const [jobs, setJobs] = useState(jobsData)
 
     const [showRecruiterLogin, setShowRecruiterLogin] = useState(false)
 
@@ -32,17 +34,16 @@ export const AppContextProvider = (props) => {
     // Function to Fetch Jobs 
     const fetchJobs = async () => {
         try {
-
             const { data } = await axios.get(backendUrl + '/api/jobs')
-
-            if (data.success) {
+            // If backend returns jobs, use them. Otherwise, keep the mock jobs.
+            if (data.success && data.jobs.length > 0) {
                 setJobs(data.jobs)
             } else {
-                toast.error(data.message)
+                 console.log("Using mock data as backend returned no jobs or error.")
             }
-
         } catch (error) {
-            toast.error(error.message)
+            console.log("Backend fetch failed, using mock data:", error.message)
+            // toast.error(error.message) // Optional: suppress error toast for smoother demo
         }
     }
 
@@ -59,7 +60,8 @@ export const AppContextProvider = (props) => {
             }
 
         } catch (error) {
-            toast.error(error.message)
+            // toast.error(error.message)
+            console.log("Error fetching company data:", error.message)
         }
     }
 
